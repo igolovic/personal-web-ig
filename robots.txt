@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /test1/
+Disallow: /test2/
+Disallow: /lcm-demo/
+Disallow: /admin/
+Disallow: /js/
+Disallow: /res/

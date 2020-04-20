@@ -1,0 +1,39 @@
+﻿.hd{ position:absolute; left:0px; top:0px; z-index:1;}
+#divNews{overflow:hidden;position:absolute;top:0px;left:0px;height:170px;width:158px}
+#divParent{width:140px; height:34px; position:absolute; top:132px; overflow:hidden; text-align:left}
+#leftMenu{position:absolute;width:182px;height:250px;left:0px;top:124px}
+#map{width:550px; height:550px; position:absolute; display:none; z-index:100}
+#bckg{background-image:url(res/bf.gif); background-repeat:no-repeat; width:70px; height:35px; z-index:2; position:absolute}
+#al2{position:absolute; top:0px; left:0px; display:none; z-index:11}
+#divShade { background-image:url(res/sh.png); background-repeat:repeat; overflow:hidden; height:100%; width:100%; z-index:10; position:absolute; margin:0px; padding:0px }
+.ulcv{list-style-image:url(res/bt2.gif); list-style-type:square}
+ul{ list-style-image:url(res/bt.gif); list-style-type:square}
+.mTbl{width:945px; margin-bottom:10px; margin-top:5px}
+.calRow { vertical-align:middle; text-align:center; height:20px }
+.no { width:170px; margin-top:5px; padding-top:5px; padding-bottom:5px } /*notify*/
+.high { background-color:#FFFF00; color:navy }
+.alSpan { margin:3px 5px 2px 5px; display:inline-block }
+.tb { margin-bottom:-1px; cursor:pointer; float:right; }
+.bckg { position:absolute; z-index:-1; display:none }
+.itsb { vertical-align:top; padding-top:10px }
+.itmc { padding-bottom:10px; width:50% }
+.tmc { display:block; overflow:hidden }
+.vp { display:inline; text-align:center; }
+.vi { border:0px; width:71px; height:25px }
+.inpc { width:410px;  }
+.inp { width:144px; }
+.gid { display:none; position:absolute; width:452px; height:250px; top:0px; text-align:center }
+.gi { cursor:pointer; width:333px; height:250px }
+.fsi { cursor:pointer; margin-top:5px; margin-bottom:5px; }
+.img1 { margin-bottom:-3px; height:10px; width:10px; display:inline; margin-right:10px }
+.wd1 { padding-bottom:10px; width:182px; }
+.ttip2 { position:absolute; height:70px; width:230px; top:25px; left:10px; }
+button.text { background-color:#0066cc; border:0px; width:70px; height:18px; font-weight:normal; font-family:Arial; font-size:12px; color:white; cursor:pointer; }
+.topDiv { position:absolute; display:none; background-color:white; border:1px #00488f solid; text-align:center; font-family:Tahoma; font-size:12px; color:#00488f; z-index:11; }
+.imgFlag { border-style:none; cursor:pointer; z-index:1; }
+.flag { width:70px; height:34px; padding-top:2px; z-index:3; position:absolute; }
+.mD {  display:block; margin:0px; width:160px; height:22px; }
+.mC2 { position:absolute; left:28px; width:154px; height:90px; text-align:center; }
+.wdgNW { text-align:left; }
+div.error { color:red; font-family:Arial; font-size:14px; font-weight:bold; }
+.mhT { position:absolute; padding-top:8px; width:160px; left:22px; text-align:center; }

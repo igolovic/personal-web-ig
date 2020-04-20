@@ -1,0 +1,38 @@
+table.adminTable>tbody>tr:first-child>td
+{
+	background-color:grey;
+	color:white;
+	font:16px Arial;
+}
+body
+{
+	font:16px Arial;
+}
+button
+{
+	min-width:100px;
+}
+textarea
+{
+	font:16px Arial;	
+}
+a
+{
+	font:16px Arial;
+	text-decoration:none;
+	color:gray;
+}
+a:hover
+{
+	background-color:grey;
+	color:white;
+}
+a:hover
+{
+	background-color:grey;
+	color:white		!important;
+}
+a:visited
+{
+	color:black;
+}
