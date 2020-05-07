@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Erstellungszeit: 20. Apr 2020 um 23:00
+-- Erstellungszeit: 07. Mai 2020 um 11:13
 -- Server-Version: 8.0.18
 -- PHP-Version: 5.6.40
 
@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `hit_count` (
 --
 
 INSERT INTO `hit_count` (`ip`, `date`, `total`) VALUES
-('::1', '2020-04-21 00:54:32', 27);
+('::1', '2020-04-21 01:00:52', 28);
 
 -- --------------------------------------------------------
 

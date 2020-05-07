@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Erstellungszeit: 20. Apr 2020 um 21:47
+-- Erstellungszeit: 07. Mai 2020 um 11:13
 -- Server-Version: 8.0.18
 -- PHP-Version: 5.6.40
 
@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `hit_count` (
 --
 
 INSERT INTO `hit_count` (`ip`, `date`, `total`) VALUES
-('::1', '2020-04-20 23:45:54', 22);
+('::1', '2020-04-21 01:01:21', 25);
 
 -- --------------------------------------------------------
 
@@ -275,7 +275,7 @@ INSERT INTO `image_text_submodules` (`image_text_submodule_id`, `module`, `title
 (19, 4, 'Scratch', 'MIT\'s programming language and IDE that enables children to learn programming. Excellent software and concept developed from children\'s psychologists and computer experts enables young ones to enter the world of programming.', 1, 2, 'FavProgram'),
 (21, 8, 'Interview with one-man-team developer who develops Windows memory management ', 'Interesting interview with programmer who<b>alone</b> develops large part of memory functionality of Windows OS, interesting to watch \"safe distance\" :)\r\n<br/><br/><a target=\"_blank\" href=\"https://channel9.msdn.com/Shows/Going+Deep/Landy-Wang-Windows-Memory-Manager\">Memory manager - Landy Wang</a>', 0, 1, 'FavLinks'),
 (22, 8, 'Conversation with one of the Windows kernel architects', 'Old but very educational and understandable conversation with one of the Windows kernel architects. Interview se is comprised of 4 parts. Except of explaining interesting facts about Windows kernel, Dave talks about general events and facts from the history of Windows. First part:<br/><br/><a target=\"_blank\" href=\"https://channel9.msdn.com/Shows/Going+Deep/Windows-Part-I-Dave-Probert\">Windows, Part I - Dave Probert</a>', 1, 1, 'FavLinks'),
-(24, 8, 'Mark Russinovich - author of SysInternals tools', 'Conversation with one of Microsoft\'s all-star Windows engineers, Mark\s parents are descended from Croatia. He is an author of several excellent tools for in-depth monitoring of system statuses and messages (Sysmon, Process Explorer...)\r\n<br/>\r\n<br/>\r\n<a target=\"_blank\" href=\"https://channel9.msdn.com/Shows/Going+Deep/Mark-Russinovich-Inside-Windows-7\">Mark Russinovich: Inside Windows 7</a>', 0, 2, 'FavLinks');
+(24, 8, 'Mark Russinovich - author of SysInternals tools', 'Conversation with one of Microsoft\'s all-star Windows engineers, Marks parents are descended from Croatia. He is an author of several excellent tools for in-depth monitoring of system statuses and messages (Sysmon, Process Explorer...)\r\n<br/>\r\n<br/>\r\n<a target=\"_blank\" href=\"https://channel9.msdn.com/Shows/Going+Deep/Mark-Russinovich-Inside-Windows-7\">Mark Russinovich: Inside Windows 7</a>', 0, 2, 'FavLinks');
 
 -- --------------------------------------------------------
 
