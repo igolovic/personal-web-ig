@@ -1,9 +1,9 @@
 <?php
-if(!isset($_COOKIE['pref']))
+if (!isset($_COOKIE['pref']))
 {
-setcookie("pref","Homepage",time()+5184000);
+  setcookie("pref", "Homepage", time() + 5184000, '/; SameSite=None; Secure');
 	$cookieFound = false;
-}else{ 
+} else { 
 	$cookieFound = true; 
 }
 session_start();

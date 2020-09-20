@@ -3,7 +3,7 @@
 	include("classes.php");
 	session_start();
 
-	$con = new connect();
+	$conn = new connect();
 	$resultsFound = false;
 
 	if(isset($_POST["words"]))
@@ -41,8 +41,8 @@
 				$wordsCopy2[] = "<span class='high'>".$word."</span>";
 			}			
 			
-			$result = mysql_query($query);
-			while($row = mysql_fetch_array($result))
+			$result = $conn->mysqli->query($query);
+			while ($row = $result->fetch_array())
 			{
 				$highlight = str_ireplace($wordsCopy, $wordsCopy2, strip_tags($row["title"])."<br/>".strip_tags($row["text"]));
 				if(stristr($highlight, "<span") != false)
@@ -56,11 +56,10 @@
 			}
 		}
 		
-		// image_text_submodules /////////////////////////
+		// image_text_submodules 
 		$query = "select its.title, its.text, itm.part_id from image_text_submodules as its inner join image_text_modules as itm on itm.image_text_module_id = its.module where " . $wordsIts;
-		$result = mysql_query($query);
-		
-		while($row = mysql_fetch_array($result))
+		$result = $conn->mysqli->query($query);
+		while ($row = $result->fetch_array())
 		{			
 			$highlight = str_ireplace($wordsCopy, $wordsCopy2, strip_tags($row["title"])."<br/>".strip_tags($row["text"]));
 			if(stristr($highlight, "<span") != false)
@@ -72,13 +71,11 @@
 				echo "</div>";
 			}
 		}	
-		/////////////////////////////////////////////////////	
 		
-		// cv_parts ////////////////////////////
+		// cv_parts
 		$query = "select title, part_id from cv_parts where " . $wordsCp;
-		$result = mysql_query($query);
-		
-		while($row = mysql_fetch_array($result))
+		$result = $conn->mysqli->query($query);
+		while ($row = $result->fetch_array())
 		{
 			$highlight = str_ireplace($wordsCopy, $wordsCopy2, strip_tags($row["title"])."<br/>");
 			if(stristr($highlight, "<span") != false)
@@ -90,13 +87,11 @@
 				echo "</div>";
 			}
 		}	
-		/////////////////////////////////////////////////////	
 		
-		// cv_data ////////////////////////////
+		// cv_data
 		$query = "select cd.title, cd.text, cp.part_id from cv_data as cd inner join cv_parts as cp on cd.cv_part_id = cp.cv_part_id where " . $wordsCd;
-		$result = mysql_query($query);
-		
-		while($row = mysql_fetch_array($result))
+		$result = $conn->mysqli->query($query);
+		while ($row = $result->fetch_array())
 		{
 			$highlight = str_ireplace($wordsCopy, $wordsCopy2, strip_tags($row["title"])."<br/>".strip_tags($row["text"]));				
 			if(stristr($highlight, "<span") != false)
@@ -108,16 +103,13 @@
 				echo "</div>";
 			}
 		}	
-		/////////////////////////////////////////////////////	
-					
-		// comments ////////////////////////////
+			
+		// comments
 		$query = "select comment_author, comment_text, part_id from comments where " . $wordsC;
 		
-		$con->selectDb("hr");
-		$result = mysql_query($query);
-		echo mysql_error();
-		
-		while($row = mysql_fetch_array($result))
+		$conn->selectDb("hr");
+		$result = $conn->mysqli->query($query);
+		while ($row = $result->fetch_array())
 		{
 			$highlight = str_ireplace($wordsCopy, $wordsCopy2, $row["comment_author"]."<br/>".strip_tags($row["comment_text"]));
 			if(stristr($highlight, "<span") != false)
@@ -129,13 +121,12 @@
 				echo "</div>";
 			}
 		}	
-		/////////////////////////////////////////////////////	
-
+			
 		if(!$resultsFound)
 		{
 			echo ($_SESSION["lang"] == "cro" ? "Nije pronađen nijedan rezultat<br /><br />" : "No results found<br /><br />");
 		}
 	}		
-	unset($con);
+	unset($conn);
 
 ?>

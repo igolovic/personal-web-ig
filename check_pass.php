@@ -11,7 +11,7 @@
 	
 		$conn = new connect();
 		$conn->selectDb("hr");
-				
+		
 		$check_result = $conn->mysqli->query("select * from users where username = '".$conn->mysqli->real_escape_string($_POST["user"])."' and password = '".$conn->mysqli->real_escape_string($_POST["pass"])."' limit 1");
 		unset($conn);
 
